@@ -1,5 +1,5 @@
 import PageHero from '../PageHero';
-// import NoticeBoard from '../NoticeBoard';
+import NoticeBoard from '../NoticeBoard';
 import infoImage from '../../images/back.jpg';
 
 const NoticeBoardPage = () => {
@@ -10,7 +10,7 @@ const NoticeBoardPage = () => {
         subtitle="माहिती"
         image={infoImage}
       />
-      {/* <NoticeBoard /> */}
+      <NoticeBoard />
     </div>
   );
 };

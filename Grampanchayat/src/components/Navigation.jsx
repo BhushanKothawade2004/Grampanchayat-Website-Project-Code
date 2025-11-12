@@ -44,10 +44,10 @@ const Navigation = ({ onOpenComplaint }) => {
             </div>
             <div className="flex flex-col">
               <div className="text-lg md:text-xl font-bold text-gray-800">
-                ग्रामपंचायत जयनगर
+                ग्रामपंचायत ढोडंबे
               </div>
               <div className="text-xs md:text-sm text-gray-600">
-                जिल्हा: नंदुरबार | तालुका: शहादा
+              तालुका: चांदवड | जिल्हा: नाशिक
               </div>
             </div>
           </div>
