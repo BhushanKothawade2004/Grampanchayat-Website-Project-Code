@@ -1,5 +1,5 @@
 import PageHero from '../PageHero';
-import gavImage from '../../images/gav.jpg';
+import gavImage from '../../images/back.jpg';
 
 const SavingsGroupPage = () => {
   const savingsGroups = [
@@ -9,7 +9,7 @@ const SavingsGroupPage = () => {
       members: '20',
       savings: '₹50,000+',
       description: 'गावातील पहिला बचत गट जिथे सदस्यांना बचत आणि कर्ज सुविधा उपलब्ध आहेत.',
-      contact: '+91 8292939470'
+      contact: '+91 xxxxxxxxxx'
     },
     {
       id: 2,
@@ -17,7 +17,7 @@ const SavingsGroupPage = () => {
       members: '25',
       savings: '₹75,000+',
       description: 'गावातील दुसरा बचत गट जिथे महिला सदस्यांना आर्थिक सक्षमीकरणासाठी मदत केली जाते.',
-      contact: '+91 8292939470'
+      contact: '+91 xxxxxxxxxx'
     },
     {
       id: 3,
@@ -25,7 +25,7 @@ const SavingsGroupPage = () => {
       members: '18',
       savings: '₹40,000+',
       description: 'गावातील तिसरा बचत गट जिथे सदस्यांना बचत आणि कर्ज सुविधा मिळतात.',
-      contact: '+91 8292939470'
+      contact: '+91 xxxxxxxxxx'
     }
   ];
 

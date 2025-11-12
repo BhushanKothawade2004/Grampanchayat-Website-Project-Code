@@ -1,6 +1,6 @@
 import PageHero from '../PageHero';
-import infoImage from '../../images/info.jpg';
-import gavImage from '../../images/gav.jpg';
+import infoImage from '../../images/back.jpg';
+import gavImage from '../../images/back.jpg';
 
 const VeterinaryPage = () => {
   const veterinaryCenters = [
@@ -9,7 +9,7 @@ const VeterinaryPage = () => {
       name: 'पशुवैद्यकीय दवाखाना 1',
       description: 'गावातील मुख्य पशुवैद्यकीय केंद्र जिथे पशुधनासाठी सर्व प्रकारच्या वैद्यकीय सेवा उपलब्ध आहेत.',
       services: ['पशु उपचार', 'टीकाकरण', 'पशु आरोग्य तपासणी', 'सल्ला'],
-      contact: '+91 8292939470',
+      contact: '+91 xxxxxxxxxx',
       location: 'वडाळीभोई'
     },
     {
@@ -17,7 +17,7 @@ const VeterinaryPage = () => {
       name: 'पशुवैद्यकीय दवाखाना 2',
       description: 'गावातील दुसरे पशुवैद्यकीय केंद्र जिथे पशुधनाच्या आरोग्यासाठी सेवा दिल्या जातात.',
       services: ['पशु उपचार', 'आरोग्य सल्ला', 'दवाखाना'],
-      contact: '+91 8292939470',
+      contact: '+91 xxxxxxxxxx',
       location: 'वडाळीभोई'
     }
   ];

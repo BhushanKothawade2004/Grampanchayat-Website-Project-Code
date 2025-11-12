@@ -1,6 +1,6 @@
 import PageHero from '../PageHero';
-import News from '../News';
-import mandirImage from '../../images/mandir.jpg';
+// import News from '../News';
+import mandirImage from '../../images/back.jpg';
 
 const NewsPage = () => {
   return (
@@ -10,7 +10,7 @@ const NewsPage = () => {
         subtitle="माहिती"
         image={mandirImage}
       />
-      <News />
+      {/* <News /> */}
     </div>
   );
 };

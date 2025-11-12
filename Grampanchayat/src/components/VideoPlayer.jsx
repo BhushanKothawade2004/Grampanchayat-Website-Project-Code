@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import gavvid from '../images/gavvid.mp4'; // Fallback video
+import gavvid from '../images/back.jpg'; // Fallback video (using back.jpg as placeholder)
 
 const VideoPlayer = ({ videoUrl, onClose }) => {
   const videoRef = useRef(null);

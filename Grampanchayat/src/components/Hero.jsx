@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useHomeData } from '../hooks/useHomeData';
-import gavImage from '../images/gav.jpg'; // Fallback image
+import gavImage from '../images/back.jpg'; // Fallback image
 
 const Hero = () => {
   const { data, loading } = useHomeData();

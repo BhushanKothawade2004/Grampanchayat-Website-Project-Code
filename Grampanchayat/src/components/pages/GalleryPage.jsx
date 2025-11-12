@@ -1,20 +1,35 @@
 import PageHero from '../PageHero';
-import mandirImage from '../../images/mandir.jpg';
-import infoImage from '../../images/info.jpg';
-import gavImage from '../../images/gav.jpg';
-import kakaImage from '../../images/kaka.jpg';
+import backImage from '../../images/back.jpg';
+import gavImage from '../../images/gav.jpeg';
+import logoImage from '../../images/logo.png';
+import sarpanchImage from '../../images/sarpanch.png';
+import upsarpanchImage from '../../images/upsarpanch.png';
+import official1Image from '../../images/official1.png';
+import official2Image from '../../images/official2.png';
+import official3Image from '../../images/official3.png';
+import official4Image from '../../images/official4.png';
+import official5Image from '../../images/official5.png';
+import official6Image from '../../images/official6.png';
+import official7Image from '../../images/official7.png';
+import official8Image from '../../images/official8.png';
+import official9Image from '../../images/official9.png';
 
 const GalleryPage = () => {
   const images = [
-    { id: 1, src: mandirImage, alt: 'Gallery Image 1' },
-    { id: 2, src: infoImage, alt: 'Gallery Image 2' },
-    { id: 3, src: gavImage, alt: 'Gallery Image 3' },
-    { id: 4, src: kakaImage, alt: 'Gallery Image 4' },
-    { id: 5, src: mandirImage, alt: 'Gallery Image 5' },
-    { id: 6, src: infoImage, alt: 'Gallery Image 6' },
-    { id: 7, src: gavImage, alt: 'Gallery Image 7' },
-    { id: 8, src: kakaImage, alt: 'Gallery Image 8' },
-    { id: 9, src: mandirImage, alt: 'Gallery Image 9' },
+    { id: 1, src: backImage, alt: 'Gallery Image 1' },
+    { id: 2, src: gavImage, alt: 'Gallery Image 2' },
+    { id: 3, src: logoImage, alt: 'Gallery Image 3' },
+    { id: 4, src: sarpanchImage, alt: 'Gallery Image 4' },
+    { id: 5, src: upsarpanchImage, alt: 'Gallery Image 5' },
+    { id: 6, src: official1Image, alt: 'Gallery Image 6' },
+    { id: 7, src: official2Image, alt: 'Gallery Image 7' },
+    { id: 8, src: official3Image, alt: 'Gallery Image 8' },
+    { id: 9, src: official4Image, alt: 'Gallery Image 9' },
+    { id: 10, src: official5Image, alt: 'Gallery Image 10' },
+    { id: 11, src: official6Image, alt: 'Gallery Image 11' },
+    { id: 12, src: official7Image, alt: 'Gallery Image 12' },
+    { id: 13, src: official8Image, alt: 'Gallery Image 13' },
+    { id: 14, src: official9Image, alt: 'Gallery Image 14' },
   ];
 
   return (
@@ -22,7 +37,7 @@ const GalleryPage = () => {
       <PageHero 
         title="फोटो गॅलरी" 
         subtitle="माहिती"
-        image={gavImage}
+        image={backImage}
       />
       <section className="py-16 bg-white">
       <div className="container mx-auto px-4">

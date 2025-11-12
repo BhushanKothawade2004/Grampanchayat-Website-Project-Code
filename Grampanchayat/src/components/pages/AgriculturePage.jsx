@@ -1,5 +1,5 @@
 import PageHero from '../PageHero';
-import gavImage from '../../images/gav.jpg';
+import gavImage from '../../images/back.jpg';
 
 const AgriculturePage = () => {
   const agricultureInfo = [

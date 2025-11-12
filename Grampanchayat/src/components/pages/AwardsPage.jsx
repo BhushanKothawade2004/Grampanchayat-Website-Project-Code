@@ -1,6 +1,6 @@
 import PageHero from '../PageHero';
-import Awards from '../Awards';
-import infoImage from '../../images/info.jpg';
+// import Awards from '../Awards';
+import infoImage from '../../images/back.jpg';
 
 const AwardsPage = () => {
   return (
@@ -10,7 +10,7 @@ const AwardsPage = () => {
         subtitle="माहिती"
         image={infoImage}
       />
-      <Awards />
+      {/* <Awards /> */}
     </div>
   );
 };

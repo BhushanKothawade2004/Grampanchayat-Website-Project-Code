@@ -1,6 +1,6 @@
 import PageHero from '../PageHero';
-import infoImage from '../../images/info.jpg';
-import gavImage from '../../images/gav.jpg';
+import infoImage from '../../images/back.jpg';
+import gavImage from '../../images/back.jpg';
 
 const HealthPage = () => {
   const healthCenters = [
@@ -9,7 +9,7 @@ const HealthPage = () => {
       name: 'आरोग्य दवाखाना 1',
       description: 'गावातील मुख्य आरोग्य केंद्र जिथे सर्व प्रकारच्या आरोग्य सेवा उपलब्ध आहेत.',
       services: ['सामान्य उपचार', 'टीकाकरण', 'आरोग्य तपासणी'],
-      contact: '+91 8292939470',
+      contact: '+91 xxxxxxxxxx',
       location: 'वडाळीभोई'
     },
     {
@@ -17,7 +17,7 @@ const HealthPage = () => {
       name: 'आरोग्य दवाखाना 2',
       description: 'गावातील दुसरे आरोग्य केंद्र जिथे आरोग्य संबंधित सर्व सेवा मिळतात.',
       services: ['आरोग्य सल्ला', 'दवाखाना', 'आरोग्य माहिती'],
-      contact: '+91 8292939470',
+      contact: '+91 xxxxxxxxxx',
       location: 'वडाळीभोई'
     }
   ];

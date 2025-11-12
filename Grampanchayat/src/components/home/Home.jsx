@@ -1,10 +1,10 @@
 import Hero from '../Hero';
 import About from '../About';
 import Leadership from '../Leadership';
-import Awards from '../Awards';
-import News from '../News';
+// import Awards from '../Awards';
+// import News from '../News';
 import Achievements from '../Achievements';
-import NoticeBoard from '../NoticeBoard';
+// import NoticeBoard from '../NoticeBoard';
 import { VillageStatisticsComponents } from '../VillageComponents';
 
 const Home = () => {
@@ -13,10 +13,10 @@ const Home = () => {
       <Hero />
       <About />
       <Leadership />
-      <Awards />
-      <News />
+      {/* <Awards /> */}
+      {/* <News /> */}
       <Achievements />
-      <NoticeBoard />
+      {/* <NoticeBoard /> */}
       <VillageStatisticsComponents language="mr" />
     </>
   );

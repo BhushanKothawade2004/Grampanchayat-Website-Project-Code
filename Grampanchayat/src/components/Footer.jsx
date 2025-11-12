@@ -8,8 +8,8 @@ const Footer = () => {
   ];
 
   const otherMenu = [
-    { label: 'पुरस्कार / यशोगाथा', link: '#awards' },
-    { label: 'पर्यटन स्थळ', link: '#tourism' },
+    // { label: 'पुरस्कार / यशोगाथा', link: '#awards' },
+    // { label: 'पर्यटन स्थळ', link: '#tourism' },
     { label: 'मंदिर', link: '#temple' },
     { label: 'आरोग्य दवाखाने', link: '#health' },
     { label: 'शाळा', link: '#school' },
@@ -21,12 +21,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Village Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">वडाळीभोई ग्रामपंचायत</h3>
+            <h3 className="text-xl font-bold mb-4">ग्रामपंचायत जयनगर </h3>
             <p className="text-gray-300 mb-4">
               एक समृद्ध व शांत गाव, जिथे शेती, परंपरा आणि एकतेला महत्त्व दिले जाते.
             </p>
             <a href="#" className="text-blue-400 hover:text-blue-300 transition">
-              अधिक वाचा >>
+              अधिक वाचा 
             </a>
           </div>
 
@@ -74,20 +74,20 @@ const Footer = () => {
                   className="text-gray-300 hover:text-white transition flex items-center gap-2"
                 >
                   <span>📞</span>
-                  <span>+91 8292939470</span>
+                  <span>+91 xxxxxxxxxx</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:chdvadalibhoi@gmail.com"
+                  href="mailto:grampanchayat@gmail.com"
                   className="text-gray-300 hover:text-white transition flex items-center gap-2"
                 >
                   <span>✉️</span>
-                  <span>chdvadalibhoi@gmail.com</span>
+                  <span>grampanchayat@gmail.com</span>
                 </a>
               </li>
               <li className="text-gray-300">
-                At/Post-वडाळीभोई खु तालुका-चांदवड जिल्हा-नाशिक
+                At/Post-ग्रामपंचायत जयनगर तालुका शहादा जिल्हा नंदुरबार 
               </li>
               <li className="flex gap-4 mt-4">
                 <a href="#" className="hover:text-blue-400 transition" aria-label="Facebook">
@@ -115,7 +115,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-700 pt-8 mt-8 text-center text-gray-400">
-          <p>Copyright © 2025 Vadalibhoi Gram Panchayat. All Rights Reserved</p>
+          <p>Copyright © 2025 Jainagar Gram Panchayat. All Rights Reserved</p>
         </div>
       </div>
     </footer>

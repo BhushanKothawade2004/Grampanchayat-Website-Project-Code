@@ -1,7 +1,7 @@
 import PageHero from '../PageHero';
-import PopulationStats from '../PopulationStats';
+// import PopulationStats from '../PopulationStats';
 import Achievements from '../Achievements';
-import gavImage from '../../images/gav.jpg';
+import gavImage from '../../images/back.jpg';
 
 const VillageInfoPage = () => {
   return (
@@ -46,7 +46,7 @@ const VillageInfoPage = () => {
         </div>
       </section>
       <Achievements />
-      <PopulationStats />
+      {/* <PopulationStats /> */}
     </div>
   );
 };
