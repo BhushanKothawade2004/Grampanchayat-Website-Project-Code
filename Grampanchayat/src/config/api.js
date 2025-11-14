@@ -1,6 +1,26 @@
 // API Configuration
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
-const VILLAGE_DOMAIN = import.meta.env.VITE_VILLAGE_DOMAIN || window.location.hostname;
+
+// Get village domain - prioritize env var, then use current hostname
+const getVillageDomainFromEnv = () => {
+  // If explicitly set in env, use it
+  if (import.meta.env.VITE_VILLAGE_DOMAIN) {
+    return import.meta.env.VITE_VILLAGE_DOMAIN;
+  }
+  
+  // Otherwise, use current hostname (works for Netlify, custom domains, etc.)
+  const hostname = window.location.hostname;
+  
+  // For localhost, keep it as localhost
+  if (hostname === 'localhost' || hostname === '127.0.0.1') {
+    return 'localhost';
+  }
+  
+  // For Netlify and other deployments, use the actual hostname
+  return hostname;
+};
+
+const VILLAGE_DOMAIN = getVillageDomainFromEnv();
 
 /**
  * Get village domain from current URL
