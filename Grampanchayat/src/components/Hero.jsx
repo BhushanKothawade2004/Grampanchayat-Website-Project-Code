@@ -16,10 +16,22 @@ const Hero = () => {
     if (!url) return gavImage;
     if (url.startsWith('http')) return url;
     
+    // Get API base URL - same logic as api.js
+    const getApiBaseUrl = () => {
+      if (import.meta.env.VITE_API_BASE_URL) {
+        return import.meta.env.VITE_API_BASE_URL;
+      }
+      if (window.location.hostname.includes('netlify.app') || 
+          window.location.hostname.includes('grampanchayat') ||
+          window.location.hostname !== 'localhost') {
+        return 'https://grampanchayat-website-project-code.onrender.com/api';
+      }
+      return 'http://localhost:5000/api';
+    };
+    
     // API returns URLs like "/api/images/..." 
-    // VITE_API_BASE_URL is "http://localhost:5000/api"
     // So we need to remove /api from base URL if URL already starts with /api
-    const baseUrl = import.meta.env.VITE_API_BASE_URL;
+    const baseUrl = getApiBaseUrl();
     let finalUrl;
     if (url.startsWith('/api')) {
       // Remove /api from base URL to avoid double /api
