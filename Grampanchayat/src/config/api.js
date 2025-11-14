@@ -1,5 +1,10 @@
 // API Configuration
+// Debug: Log environment variable (remove in production)
+console.log('VITE_API_BASE_URL from env:', import.meta.env.VITE_API_BASE_URL);
+console.log('All VITE env vars:', Object.keys(import.meta.env).filter(key => key.startsWith('VITE_')));
+
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+console.log('Final API_BASE_URL:', API_BASE_URL);
 
 // Get village domain - prioritize env var, then use current hostname
 const getVillageDomainFromEnv = () => {
