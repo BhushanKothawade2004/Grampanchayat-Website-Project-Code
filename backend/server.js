@@ -36,6 +36,35 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// Root route - Welcome page
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    status: 'Server is running',
+    message: 'Welcome to Gram Panchayat API',
+    version: '1.0.0',
+    timestamp: new Date().toISOString(),
+    endpoints: {
+      health: '/api/health',
+      public: {
+        home: '/api/v1/data/home (requires X-Village-Domain header)',
+        images: '/api/images (requires X-Village-Domain header)',
+        complaints: 'POST /api/complaints (requires X-Village-Domain header)'
+      },
+      admin: {
+        register: 'POST /api/admin/auth/register (requires X-Village-Domain header)',
+        login: 'POST /api/admin/auth/login (requires X-Village-Domain header)',
+        hero: '/api/admin/hero (requires authentication)',
+        about: '/api/admin/about (requires authentication)',
+        officials: '/api/admin/officials (requires authentication)',
+        images: '/api/admin/images (requires authentication)',
+        complaints: '/api/admin/complaints (requires authentication)'
+      }
+    },
+    documentation: 'All admin routes require X-Village-Domain header and JWT authentication token'
+  });
+});
+
 // Public routes (require village identification)
 app.use('/api/images', identifyVillage, publicImagesRoute);
 
