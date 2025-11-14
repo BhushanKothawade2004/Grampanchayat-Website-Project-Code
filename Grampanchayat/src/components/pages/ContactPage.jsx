@@ -70,7 +70,7 @@ const ContactPage = () => {
                     <div>
                       <h4 className="font-semibold text-gray-800 mb-1">पत्ता</h4>
                       <p className="text-gray-600">
-                        At/Post-जयनगर खु<br />
+                        At/Post-जयनगर<br />
                         तालुका-शहादा<br />
                         जिल्हा-नंदुरबार
                       </p>
