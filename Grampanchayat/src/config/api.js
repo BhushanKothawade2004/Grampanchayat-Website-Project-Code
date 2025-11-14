@@ -1,5 +1,25 @@
 // API Configuration
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+// Debug: Log environment variable (remove in production)
+console.log('VITE_API_BASE_URL from env:', import.meta.env.VITE_API_BASE_URL);
+console.log('All VITE env vars:', Object.keys(import.meta.env).filter(key => key.startsWith('VITE_')));
+console.log('All env vars with values:', Object.keys(import.meta.env).filter(key => key.startsWith('VITE_')).map(key => `${key}: ${import.meta.env[key]}`));
+
+// API Base URL - Hardcoded to Render backend for production
+// For local development, override in .env file
+const getApiBaseUrl = () => {
+  // If on localhost, check .env file first
+  if (typeof window !== 'undefined' && 
+      (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+    // For localhost, use .env if set, otherwise use localhost backend
+    return import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+  }
+  
+  // For production/Netlify: Always use Render backend
+  return 'https://grampanchayat-website-project-code.onrender.com/api';
+};
+
+const API_BASE_URL = getApiBaseUrl();
+console.log('Final API_BASE_URL:', API_BASE_URL);
 
 // Get village domain - prioritize env var, then use current hostname
 const getVillageDomainFromEnv = () => {
