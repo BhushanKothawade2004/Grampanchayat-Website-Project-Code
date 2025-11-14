@@ -19,7 +19,7 @@ const Hero = () => {
     // API returns URLs like "/api/images/..." 
     // VITE_API_BASE_URL is "http://localhost:5000/api"
     // So we need to remove /api from base URL if URL already starts with /api
-    const baseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+    const baseUrl = import.meta.env.VITE_API_BASE_URL;
     let finalUrl;
     if (url.startsWith('/api')) {
       // Remove /api from base URL to avoid double /api
