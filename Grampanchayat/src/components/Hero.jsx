@@ -11,6 +11,19 @@ const Hero = () => {
   const heroData = data?.hero;
   // If image is a relative URL from API, construct full URL, otherwise use as-is
   const heroImageUrl = heroData?.image;
+
+  const getApiBaseUrl = () => {
+    // If on localhost, check .env file first
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      return import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+    }
+    // For production/Netlify: Always use Render backend
+    return 'https://grampanchayat-website-project-code.onrender.com/api';
+  };
+  
+  // API returns URLs like "/api/images/..." 
+  // So we need to remove /api from base URL if URL already starts with /api
+  const baseUrl = getApiBaseUrl();
   
   const getImageUrl = (url) => {
     if (!url) return gavImage;
@@ -19,7 +32,6 @@ const Hero = () => {
     // API returns URLs like "/api/images/..." 
     // VITE_API_BASE_URL is "http://localhost:5000/api"
     // So we need to remove /api from base URL if URL already starts with /api
-    const baseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
     let finalUrl;
     if (url.startsWith('/api')) {
       // Remove /api from base URL to avoid double /api
