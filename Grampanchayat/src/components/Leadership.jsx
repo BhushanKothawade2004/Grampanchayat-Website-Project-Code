@@ -22,15 +22,12 @@ const Leadership = () => {
     
     // Get API base URL - same logic as api.js
     const getApiBaseUrl = () => {
-      if (import.meta.env.VITE_API_BASE_URL) {
-        return import.meta.env.VITE_API_BASE_URL;
+      // If on localhost, check .env file first
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        return import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
       }
-      if (window.location.hostname.includes('netlify.app') || 
-          window.location.hostname.includes('grampanchayat') ||
-          window.location.hostname !== 'localhost') {
-        return 'https://grampanchayat-website-project-code.onrender.com/api';
-      }
-      return 'http://localhost:5000/api';
+      // For production/Netlify: Always use Render backend
+      return 'https://grampanchayat-website-project-code.onrender.com/api';
     };
     
     // API returns URLs like "/api/images/..." 
