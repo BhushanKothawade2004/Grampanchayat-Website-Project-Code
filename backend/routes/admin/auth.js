@@ -13,6 +13,15 @@ router.post('/login', identifyVillage, async (req, res) => {
     const { email, password } = req.body;
     const { villageDomain } = req;
     
+    // Debug logging
+    console.log('Login attempt:', {
+      email: email,
+      domain: villageDomain,
+      xVillageDomain: req.headers['x-village-domain'],
+      origin: req.headers.origin,
+      referer: req.headers.referer
+    });
+    
     if (!email || !password) {
       return res.status(400).json({
         success: false,

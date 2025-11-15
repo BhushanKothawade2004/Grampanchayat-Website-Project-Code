@@ -5,6 +5,7 @@ import HeroEditor from './HeroEditor';
 import AboutEditor from './AboutEditor';
 import LeadershipManager from './LeadershipManager';
 import ComplaintsList from './ComplaintsList';
+import QRCodeEditor from './QRCodeEditor';
 
 const AdminDashboard = () => {
   const { admin, logout } = useAdmin();
@@ -15,6 +16,7 @@ const AdminDashboard = () => {
     { id: 'hero', label: 'Hero Section', icon: '🏠', permission: PERMISSIONS.MANAGE_HERO },
     { id: 'about', label: 'About Section', icon: '📝', permission: PERMISSIONS.MANAGE_ABOUT },
     { id: 'leadership', label: 'Leadership', icon: '👥', permission: PERMISSIONS.MANAGE_LEADERSHIP },
+    { id: 'qrcodes', label: 'QR Codes', icon: '📱', permission: PERMISSIONS.UPLOAD_IMAGES },
     { id: 'complaints', label: 'Complaints', icon: '📋', permission: PERMISSIONS.VIEW_COMPLAINTS },
   ];
 
@@ -30,6 +32,8 @@ const AdminDashboard = () => {
         return <AboutEditor />;
       case 'leadership':
         return <LeadershipManager />;
+      case 'qrcodes':
+        return <QRCodeEditor />;
       case 'complaints':
         return <ComplaintsList />;
       default:

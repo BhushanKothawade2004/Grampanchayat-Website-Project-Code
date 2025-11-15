@@ -15,6 +15,8 @@ const adminHeroRoute = require('./routes/admin/hero');
 const adminAboutRoute = require('./routes/admin/about');
 const adminOfficialsRoute = require('./routes/admin/officials');
 const adminComplaintsRoute = require('./routes/admin/complaints');
+const adminQRCodesRoute = require('./routes/admin/qrcodes');
+const publicQRCodesRoute = require('./routes/public/qrcodes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -48,6 +50,7 @@ app.get('/', (req, res) => {
       health: '/api/health',
       public: {
         home: '/api/v1/data/home (requires X-Village-Domain header)',
+        qrcodes: '/api/v1/data/qrcodes (requires X-Village-Domain header)',
         images: '/api/images (requires X-Village-Domain header)',
         complaints: 'POST /api/complaints (requires X-Village-Domain header)'
       },
@@ -58,7 +61,8 @@ app.get('/', (req, res) => {
         about: '/api/admin/about (requires authentication)',
         officials: '/api/admin/officials (requires authentication)',
         images: '/api/admin/images (requires authentication)',
-        complaints: '/api/admin/complaints (requires authentication)'
+        complaints: '/api/admin/complaints (requires authentication)',
+        qrcodes: '/api/admin/qrcodes (requires authentication)'
       }
     },
     documentation: 'All admin routes require X-Village-Domain header and JWT authentication token'
@@ -70,6 +74,7 @@ app.use('/api/images', identifyVillage, publicImagesRoute);
 
 // Public data routes (require village identification)
 app.use('/api/v1/data/home', identifyVillage, publicHomeRoute);
+app.use('/api/v1/data/qrcodes', identifyVillage, publicQRCodesRoute);
 
 // Admin routes (all require village identification first)
 app.use('/api/admin/auth', adminAuthRoute);
@@ -78,6 +83,7 @@ app.use('/api/admin/hero', identifyVillage, adminHeroRoute);
 app.use('/api/admin/about', identifyVillage, adminAboutRoute);
 app.use('/api/admin/officials', identifyVillage, adminOfficialsRoute);
 app.use('/api/admin/complaints', identifyVillage, adminComplaintsRoute);
+app.use('/api/admin/qrcodes', identifyVillage, adminQRCodesRoute);
 
 // Complaint submission route (public, but needs village identification)
 app.post('/api/complaints', identifyVillage, async (req, res) => {
