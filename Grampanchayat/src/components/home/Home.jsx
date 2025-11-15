@@ -4,7 +4,7 @@ import Leadership from '../Leadership';
 // import Awards from '../Awards';
 // import News from '../News';
 import Achievements from '../Achievements';
-// import NoticeBoard from '../NoticeBoard';
+import NoticeBoard from '../NoticeBoard';
 import { VillageStatisticsComponents } from '../VillageComponents';
 
 const Home = () => {
@@ -16,8 +16,8 @@ const Home = () => {
       {/* <Awards /> */}
       {/* <News /> */}
       <Achievements />
-      {/* <NoticeBoard /> */}
-      <VillageStatisticsComponents language="mr" />
+      <NoticeBoard />
+      {/* <VillageStatisticsComponents language="mr" /> */}
     </>
   );
 };

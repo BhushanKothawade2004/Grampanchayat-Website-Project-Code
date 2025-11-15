@@ -10,9 +10,6 @@ import official3Image from '../../images/official3.png';
 import official4Image from '../../images/official4.png';
 import official5Image from '../../images/official5.png';
 import official6Image from '../../images/official6.png';
-import official7Image from '../../images/official7.png';
-import official8Image from '../../images/official8.png';
-import official9Image from '../../images/official9.png';
 
 const GalleryPage = () => {
   const images = [
@@ -27,9 +24,6 @@ const GalleryPage = () => {
     { id: 9, src: official4Image, alt: 'Gallery Image 9' },
     { id: 10, src: official5Image, alt: 'Gallery Image 10' },
     { id: 11, src: official6Image, alt: 'Gallery Image 11' },
-    { id: 12, src: official7Image, alt: 'Gallery Image 12' },
-    { id: 13, src: official8Image, alt: 'Gallery Image 13' },
-    { id: 14, src: official9Image, alt: 'Gallery Image 14' },
   ];
 
   return (

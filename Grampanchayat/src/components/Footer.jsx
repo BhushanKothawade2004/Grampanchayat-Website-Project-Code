@@ -10,9 +10,10 @@ const Footer = () => {
   const otherMenu = [
     // { label: 'पुरस्कार / यशोगाथा', link: '#awards' },
     // { label: 'पर्यटन स्थळ', link: '#tourism' },
-    { label: 'मंदिर', link: '#temple' },
-    { label: 'आरोग्य दवाखाने', link: '#health' },
-    { label: 'शाळा', link: '#school' },
+    // { label: 'मंदिर', link: '#temple' },
+    // { label: 'आरोग्य दवाखाने', link: '#health' },
+    // { label: 'शाळा', link: '#school' },
+    { label: 'होम', link: '#home' },
   ];
 
   return (
@@ -87,7 +88,8 @@ const Footer = () => {
                 </a>
               </li>
               <li className="text-gray-300">
-                At/Post-ग्रामपंचायत जयनगर तालुका शहादा जिल्हा नंदुरबार 
+                At/Post-ग्रामपंचायत बहादूरी ता.चांदवड, जि.नाशिक
+
               </li>
               <li className="flex gap-4 mt-4">
                 <a href="#" className="hover:text-blue-400 transition" aria-label="Facebook">
@@ -115,7 +117,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-700 pt-8 mt-8 text-center text-gray-400">
-          <p>Copyright © 2025 Jainagar Gram Panchayat. All Rights Reserved</p>
+          <p>Copyright © 2025 Bahadhuri Gram Panchayat. All Rights Reserved</p>
         </div>
       </div>
     </footer>

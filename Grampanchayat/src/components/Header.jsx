@@ -34,10 +34,10 @@ const Header = () => {
           <div className="flex items-center gap-4">
             {/* Language Selector */}
             <div className="flex items-center gap-2">
-              <span className="text-xs">🇬🇧</span>
+              {/* <span className="text-xs">🇬🇧</span>
               <span className="text-xs">English</span>
               <span className="text-xs">🇮🇳</span>
-              <span className="text-xs">हिन्दी</span>
+              <span className="text-xs">हिन्दी</span> */}
               <span className="text-xs">🇮🇳</span>
               <span className="text-xs font-semibold">मराठी</span>
             </div>

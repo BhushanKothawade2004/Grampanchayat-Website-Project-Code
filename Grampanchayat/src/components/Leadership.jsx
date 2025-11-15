@@ -7,9 +7,6 @@ import official3Image from '../images/official3.png';
 import official4Image from '../images/official4.png';
 import official5Image from '../images/official5.png';
 import official6Image from '../images/official6.png';
-import official7Image from '../images/official7.png';
-import official8Image from '../images/official8.png';
-import official9Image from '../images/official9.png';
 
 const Leadership = () => {
   const { data, loading } = useHomeData();
@@ -74,22 +71,22 @@ const Leadership = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
                 {/* Left Column - Sarpanch Card */}
                 <div className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
-                  <div className="p-2 bg-gradient-to-br from-teal-50 to-blue-50">
-                    <div className="bg-white rounded-lg p-4">
-                      <div className="mb-6 overflow-hidden rounded-lg shadow-md">
+                  <div className="p-3 bg-gradient-to-br from-teal-50 to-blue-50">
+                    <div className="bg-white rounded-lg p-6">
+                      <div className="mb-6 overflow-hidden rounded-lg shadow-lg bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center" style={{ minHeight: '450px' }}>
                           <img 
                             src={getImageUrl(sarpanch?.image)} 
                             alt={sarpanch?.role?.[language] || sarpanch?.role?.mr || 'सरपंच'} 
-                            className="w-full h-[400px] object-cover object-center hover:scale-105 transition-transform duration-500"
+                            className="w-full h-full max-h-[450px] object-contain object-center hover:scale-105 transition-transform duration-500"
                             loading="lazy"
                             style={{ imageRendering: 'auto' }}
                           />
                       </div>
-                      <div className="text-center space-y-2">
-                        <h3 className="text-2xl md:text-3xl font-bold text-blue-800 mb-2">
-                          {sarpanch?.name?.[language] || sarpanch?.name?.mr || 'श्री. मोगराज सतीश सोनवणे'}
+                      <div className="text-center space-y-3">
+                        <h3 className="text-2xl md:text-3xl font-bold text-blue-800 mb-2 leading-tight">
+                          {sarpanch?.name?.[language] || sarpanch?.name?.mr || 'सौ. मंगलाताई केदु शिरसाठ'}
                         </h3>
-                        <div className="inline-block px-4 py-1 bg-teal-100 rounded-full mb-2">
+                        <div className="inline-block px-5 py-2 bg-gradient-to-r from-teal-100 to-teal-50 rounded-full mb-2 shadow-sm border border-teal-200">
                           <p className="text-lg font-semibold text-teal-800">
                             {sarpanch?.role?.[language] || sarpanch?.role?.mr || 'सरपंच'}
                           </p>
@@ -176,7 +173,7 @@ const Leadership = () => {
                         </div>
                         <div className="p-6 text-center space-y-2">
                           <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">
-                            वनश्री ईश्वरभाऊ संतोष माळी
+                          श्री. आनंदा मुरलीधर शिरसाठ
                           </h3>
                           <div className="inline-block px-3 py-1 bg-teal-100 rounded-full mb-1">
                             <p className="text-base font-semibold text-teal-800">
@@ -200,7 +197,7 @@ const Leadership = () => {
                         </div>
                         <div className="p-6 text-center space-y-2">
                           <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">
-                            श्री. बी. ए. पाटील
+                          संपूर्ण नाव
                           </h3>
                           <div className="inline-block px-3 py-1 bg-teal-100 rounded-full mb-1">
                             <p className="text-base font-semibold text-teal-800">
@@ -224,7 +221,7 @@ const Leadership = () => {
                         </div>
                         <div className="p-6 text-center space-y-2">
                           <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">
-                          श्री. शरद गोपाल पाटील
+                          श्री. नवनाथ निवृत्ती उगले
                           </h3>
                           <div className="inline-block px-3 py-1 bg-teal-100 rounded-full mb-1">
                             <p className="text-base font-semibold text-teal-800">
@@ -248,7 +245,7 @@ const Leadership = () => {
                         </div>
                         <div className="p-6 text-center space-y-2">
                           <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">
-                          श्री. मडकु बाबू जमादार
+                          सौ. शैला योगेश गारे
                           </h3>
                           <div className="inline-block px-3 py-1 bg-teal-100 rounded-full mb-1">
                             <p className="text-base font-semibold text-teal-800">
@@ -272,7 +269,7 @@ const Leadership = () => {
                         </div>
                         <div className="p-6 text-center space-y-2">
                           <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">
-                          श्री. अजय जतन मोरे
+                          श्री. समाधान काशिनाथ शिरसाठ
                           </h3>
                           <div className="inline-block px-3 py-1 bg-teal-100 rounded-full mb-1">
                             <p className="text-base font-semibold text-teal-800">
@@ -296,7 +293,7 @@ const Leadership = () => {
                         </div>
                         <div className="p-6 text-center space-y-2">
                           <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">
-                          सौ. सुशीलाबाई संतोष पारधी
+                          श्री. योगेश गरिबराव गांगुर्डे
                           </h3>
                           <div className="inline-block px-3 py-1 bg-teal-100 rounded-full mb-1">
                             <p className="text-base font-semibold text-teal-800">
@@ -320,79 +317,7 @@ const Leadership = () => {
                         </div>
                         <div className="p-6 text-center space-y-2">
                           <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">
-                          सौ. मंगलाबाई भगवान माळी
-                          </h3>
-                          <div className="inline-block px-3 py-1 bg-teal-100 rounded-full mb-1">
-                            <p className="text-base font-semibold text-teal-800">
-                              सदस्य
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      {/* official7Image */}
-                      <div 
-                        key="placeholder-member"
-                        className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-                      >
-                        <div className="overflow-hidden">
-                          <img 
-                            src={official7Image} 
-                            alt="सदस्य" 
-                            className="w-full h-[350px] object-cover object-center hover:scale-110 transition-transform duration-500"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="p-6 text-center space-y-2">
-                          <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">
-                          सौ. सिंधुबाई बंडु सहारे
-                          </h3>
-                          <div className="inline-block px-3 py-1 bg-teal-100 rounded-full mb-1">
-                            <p className="text-base font-semibold text-teal-800">
-                              सदस्य
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      {/* official8Image */}
-                      <div 
-                        key="placeholder-member"
-                        className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-                      >
-                        <div className="overflow-hidden">
-                          <img 
-                            src={official8Image} 
-                            alt="सदस्य" 
-                            className="w-full h-[350px] object-cover object-center hover:scale-110 transition-transform duration-500"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="p-6 text-center space-y-2">
-                          <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">
-                          सौ. लताबाई राजु सोनवणे
-                          </h3>
-                          <div className="inline-block px-3 py-1 bg-teal-100 rounded-full mb-1">
-                            <p className="text-base font-semibold text-teal-800">
-                              सदस्य
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      {/* official9Image */}
-                      <div 
-                        key="placeholder-member"
-                        className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-                      >
-                        <div className="overflow-hidden">
-                          <img 
-                            src={official9Image} 
-                            alt="सदस्य" 
-                            className="w-full h-[350px] object-cover object-center hover:scale-110 transition-transform duration-500"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="p-6 text-center space-y-2">
-                          <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">
-                          सौ. पुनम सुकलाल पारधी
+                          सौ. अंजना रमेश आढार
                           </h3>
                           <div className="inline-block px-3 py-1 bg-teal-100 rounded-full mb-1">
                             <p className="text-base font-semibold text-teal-800">

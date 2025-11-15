@@ -18,15 +18,15 @@ const Navigation = ({ onOpenComplaint }) => {
         // { label: 'आरोग्य दवाखाने', link: '#health' },
         // { label: 'शाळा', link: '#school' },
         // { label: 'शेती', link: '#agriculture' },
-        // { label: 'सूचना फलक', link: '#notice' },
-        // { label: 'गावाची माहिती', link: '#village-info' },
+        { label: 'ग्रामपंचायत बहादूरी', link: '#notice' },
+        { label: 'गावाची माहिती', link: '#village-info' },
         // { label: 'पशुवैद्यकीय दवाखाने', link: '#veterinary' },
         // { label: 'बचत गट माहिती', link: '#savings-group' },
         // { label: 'लोकप्रिय योजना', link: '#schemes' },
-        { label: 'Admin', link: '#admin-login' },
+        { label: 'Admin Login', link: '#admin-login' },
       ],
     },
-    { label: 'संपर्क साधा', link: '#contact' },
+    // { label: 'संपर्क साधा', link: '#contact' },
   ];
 
   return (
@@ -38,16 +38,16 @@ const Navigation = ({ onOpenComplaint }) => {
             <div className="w-12 h-12 flex items-center justify-center shadow-md">
               <img 
                 src={logoImage} 
-                alt="ग्रामपंचायत लोगो" 
-                className="w-12 h-12 object-contain"
+                alt="ग्रामपंचायत बहादूरी Logo" 
+                className="w-full h-full object-contain"
               />
             </div>
-            <div className="flex flex-col">
+            <div>
               <div className="text-lg md:text-xl font-bold text-gray-800">
-                ग्रामपंचायत जयनगर
+                ग्रामपंचायत बहादूरी
               </div>
               <div className="text-xs md:text-sm text-gray-600">
-                जिल्हा: नंदुरबार | तालुका: शहादा
+                ता.चांदवड, जि.नाशिक
               </div>
             </div>
           </div>
