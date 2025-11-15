@@ -121,13 +121,40 @@ This backend supports only 3 sections: Hero, About, and Leadership, plus Complai
 
 ---
 
-### 5. images Collection (Metadata)
+### 5. qrcodes Collection
+```javascript
+{
+  _id: ObjectId,
+  imageId: ObjectId,        // Reference to images collection (QR code image)
+  price: Number,            // Optional price for the payment/service
+  purpose: {                // What is this QR code for?
+    en: String,
+    mr: String,
+    hi: String
+  },
+  description: {            // Additional description
+    en: String,
+    mr: String,
+    hi: String
+  },
+  isActive: Boolean,        // Whether to show on website
+  order: Number,           // Display order
+  createdAt: Date,
+  updatedAt: Date
+}
+```
+
+**Images:** Stored in `images` collection with `component: 'qr-code'`
+
+---
+
+### 6. images Collection (Metadata)
 ```javascript
 {
   _id: ObjectId,
   gridfsId: ObjectId,     // Reference to GridFS file
   villageId: ObjectId,
-  component: String,      // 'home-hero', 'leadership-sarpanch', 'leadership-team'
+  component: String,      // 'home-hero', 'leadership-sarpanch', 'leadership-team', 'qr-code'
   category: String,       // Optional (e.g., 'उपसरपंच', 'ग्राम पंचायत अधिकारी', 'सदस्य')
   altText: String,
   order: Number,
@@ -145,6 +172,7 @@ This backend supports only 3 sections: Hero, About, and Leadership, plus Complai
 ### Public Endpoints
 - `GET /api/health` - Health check
 - `GET /api/v1/data/home` - Get home page data (Hero, About, Leadership)
+- `GET /api/v1/data/qrcodes` - Get active QR codes
 - `GET /api/images/:imageId` - Serve image
 - `POST /api/complaints` - Submit complaint
 
@@ -166,4 +194,9 @@ This backend supports only 3 sections: Hero, About, and Leadership, plus Complai
 - `GET /api/admin/images/component/:component` - Get images by component
 - `PUT /api/admin/images/:id` - Update image metadata
 - `DELETE /api/admin/images/:id` - Delete image
+- `GET /api/admin/qrcodes` - Get all QR codes
+- `GET /api/admin/qrcodes/:id` - Get single QR code
+- `POST /api/admin/qrcodes` - Create QR code
+- `PUT /api/admin/qrcodes/:id` - Update QR code
+- `DELETE /api/admin/qrcodes/:id` - Delete QR code
 
