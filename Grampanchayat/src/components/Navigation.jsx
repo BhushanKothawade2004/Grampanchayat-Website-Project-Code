@@ -44,7 +44,7 @@ const Navigation = ({ onOpenComplaint }) => {
             </div>
             <div className="flex flex-col">
               <div className="text-lg md:text-xl font-bold text-gray-800">
-                ग्रामपंचायत ढोडंबे
+                ग्रामपंचायत धोंडबे
               </div>
               <div className="text-xs md:text-sm text-gray-600">
               तालुका: चांदवड | जिल्हा: नाशिक
