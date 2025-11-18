@@ -1,9 +1,9 @@
 import { useRef, useEffect } from 'react';
-import gavvid from '../images/back.jpg'; // Fallback video (using back.jpg as placeholder)
+import video1 from '../images/video1.mp4'; // Fallback video
 
 const VideoPlayer = ({ videoUrl, onClose }) => {
   const videoRef = useRef(null);
-  const videoSource = videoUrl || gavvid;
+  const videoSource = videoUrl || video1;
 
   useEffect(() => {
     // Play video when modal opens

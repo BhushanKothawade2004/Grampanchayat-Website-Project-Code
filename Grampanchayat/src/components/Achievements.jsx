@@ -2,23 +2,27 @@ const Achievements = () => {
   const stats = [
     {
       id: 1,
-      value: '-%',
-      label: 'साक्षरता दर'
+      value: '2142',
+      label: 'एकूण लोकसंख्या',
+      icon: '👥'
     },
     {
       id: 2,
-      value: '-+',
-      label: 'हेक्टर जमीन'
+      value: '674.66',
+      label: 'हेक्टर जमीन',
+      icon: '🌾'
     },
     {
       id: 3,
-      value: '-+',
-      label: 'शिक्षण केंद्र'
+      value: '419',
+      label: 'एकूण घरे',
+      icon: '🏠'
     },
     {
       id: 4,
       value: '24/7',
-      label: 'स्वच्छ पाण्याची सोय'
+      label: 'स्वच्छ पाण्याची सोय',
+      icon: '💧'
     }
   ];
 
@@ -48,6 +52,9 @@ const Achievements = () => {
                 key={stat.id}
                 className="bg-white rounded-xl shadow-md p-6 md:p-8 text-center hover:shadow-lg transition-shadow duration-300 border border-gray-100"
               >
+                {stat.icon && (
+                  <div className="text-4xl md:text-5xl mb-3">{stat.icon}</div>
+                )}
                 <div className="text-4xl md:text-5xl font-bold text-teal-700 mb-3">
                   {stat.value}
                 </div>

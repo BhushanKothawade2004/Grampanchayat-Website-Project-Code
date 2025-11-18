@@ -13,23 +13,45 @@ import official6Image from '../../images/official6.png';
 import official7Image from '../../images/official7.png';
 import official8Image from '../../images/official8.png';
 import official9Image from '../../images/official9.png';
+import mandir1Image from '../../images/mandir1.jpeg';
+import mandir2Image from '../../images/mandir2.jpeg';
+import mandir3Image from '../../images/mandir3.jpeg';
+import tourism1Image from '../../images/Tourism1.jpeg';
+import yojana1Image from '../../images/yojana1.jpeg';
+import yojana2Image from '../../images/yojana2.jpeg';
+import yojana3Image from '../../images/yojana3.jpeg';
+import yojana4Image from '../../images/yojana4.jpeg';
+import yojana5Image from '../../images/yojana5.jpeg';
+import yojana6Image from '../../images/yojana6.jpeg';
+import yojana7Image from '../../images/yojana7.jpeg';
 
 const GalleryPage = () => {
   const images = [
-    { id: 1, src: backImage, alt: 'Gallery Image 1' },
-    { id: 2, src: gavImage, alt: 'Gallery Image 2' },
-    { id: 3, src: logoImage, alt: 'Gallery Image 3' },
-    { id: 4, src: sarpanchImage, alt: 'Gallery Image 4' },
-    { id: 5, src: upsarpanchImage, alt: 'Gallery Image 5' },
-    { id: 6, src: official1Image, alt: 'Gallery Image 6' },
-    { id: 7, src: official2Image, alt: 'Gallery Image 7' },
-    { id: 8, src: official3Image, alt: 'Gallery Image 8' },
-    { id: 9, src: official4Image, alt: 'Gallery Image 9' },
-    { id: 10, src: official5Image, alt: 'Gallery Image 10' },
-    { id: 11, src: official6Image, alt: 'Gallery Image 11' },
-    { id: 12, src: official7Image, alt: 'Gallery Image 12' },
-    { id: 13, src: official8Image, alt: 'Gallery Image 13' },
-    { id: 14, src: official9Image, alt: 'Gallery Image 14' },
+    { id: 1, src: backImage, alt: 'ग्रामपंचायत' },
+    { id: 2, src: gavImage, alt: 'गाव' },
+    { id: 3, src: logoImage, alt: 'लोगो' },
+    { id: 4, src: sarpanchImage, alt: 'सरपंच' },
+    { id: 5, src: upsarpanchImage, alt: 'उपसरपंच' },
+    { id: 6, src: official1Image, alt: 'अधिकारी १' },
+    { id: 7, src: official2Image, alt: 'अधिकारी २' },
+    { id: 8, src: official3Image, alt: 'अधिकारी ३' },
+    { id: 9, src: official4Image, alt: 'अधिकारी ४' },
+    { id: 10, src: official5Image, alt: 'अधिकारी ५' },
+    { id: 11, src: official6Image, alt: 'अधिकारी ६' },
+    { id: 12, src: official7Image, alt: 'अधिकारी ७' },
+    { id: 13, src: official8Image, alt: 'अधिकारी ८' },
+    { id: 14, src: official9Image, alt: 'अधिकारी ९' },
+    { id: 15, src: mandir1Image, alt: 'मंदिर १' },
+    { id: 16, src: mandir2Image, alt: 'मंदिर २' },
+    { id: 17, src: mandir3Image, alt: 'मंदिर ३' },
+    { id: 18, src: tourism1Image, alt: 'पर्यटन स्थळ १' },
+    { id: 19, src: yojana1Image, alt: 'क्रियाकलाप १' },
+    { id: 20, src: yojana2Image, alt: 'क्रियाकलाप २' },
+    { id: 21, src: yojana3Image, alt: 'क्रियाकलाप ३' },
+    { id: 22, src: yojana4Image, alt: 'क्रियाकलाप ४' },
+    { id: 23, src: yojana5Image, alt: 'क्रियाकलाप ५' },
+    { id: 24, src: yojana6Image, alt: 'क्रियाकलाप ६' },
+    { id: 25, src: yojana7Image, alt: 'क्रियाकलाप ७' },
   ];
 
   return (

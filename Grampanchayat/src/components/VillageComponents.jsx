@@ -18,13 +18,13 @@ const translations = {
       totalLand: 'एकूण जमीन',
       educationCenters: 'शिक्षण केंद्र'
     },
-    casteTable: {
-      title: 'जातीनुसार मतदार सारणी',
-      caste: 'जात',
-      male: 'पुरुष',
-      female: 'महिला',
-      total: 'एकूण'
-    },
+    // casteTable: {
+    //   title: 'जातीनुसार मतदार सारणी',
+    //   caste: 'जात',
+    //   male: 'पुरुष',
+    //   female: 'महिला',
+    //   total: 'एकूण'
+    // },
     villageStats: {
       title: 'गावाची आकडेवारी'
     }
@@ -44,13 +44,13 @@ const translations = {
       totalLand: 'Total Land',
       educationCenters: 'Education Centers'
     },
-    casteTable: {
-      title: 'Caste Wise Voter Table',
-      caste: 'Caste',
-      male: 'Male',
-      female: 'Female',
-      total: 'Total'
-    },
+    // casteTable: {
+    //   title: 'Caste Wise Voter Table',
+    //   caste: 'Caste',
+    //   male: 'Male',
+    //   female: 'Female',
+    //   total: 'Total'
+    // },
     villageStats: {
       title: 'Village Statistics'
     }
@@ -242,10 +242,10 @@ export const StatisticsDashboard = ({ language = 'mr' }) => {
   const t = translations[language] || translations.mr;
   
   const stats = [
-    { label: t.statistics.totalPopulation, value: '-', icon: '👥' },
-    { label: t.statistics.literacyRate, value: '-', icon: '📚' },
-    { label: t.statistics.totalLand, value: '-', icon: '🌾' },
-    { label: t.statistics.educationCenters, value: '-', icon: '🏫' }
+    { label: t.statistics.totalPopulation, value: '2142', icon: '👥' },
+    { label: 'एकूण घरे', value: '419', icon: '🏠' },
+    { label: 'एकूण भौगोलिक क्षेत्र', value: '674.66 हेक्टर', icon: '🌾' },
+    { label: 'एकूण मतदार', value: '1965', icon: '🗳️' }
   ];
 
   return (
@@ -275,72 +275,72 @@ export const StatisticsDashboard = ({ language = 'mr' }) => {
 };
 
 // Caste Wise Voter Table Component
-export const CasteWiseVoterTable = ({ language = 'mr' }) => {
-  const t = translations[language] || translations.mr;
-  
-  const casteData = [
-    { caste: 'अनुसुचीत जाती (SC)', male: '-', female: '-', total: '-' },
-    { caste: 'अनुसुचीत जमाती(ST)', male: '-', female: '-', total: '-' },
-    { caste: 'इतर मागास वग(OBC)', male: '-', female: '-', total: '-' },
-    { caste: 'विशेष मागास प्रवर्ग (SBC)', male: '-', female: '-', total: '-' },
-    { caste: 'भटक्या जमाती -अ (VJ)', male: '-', female: '-', total: '-' },
-    { caste: 'भटक्या जमाती - ब(NT-B)', male: '-', female: '-', total: '-' },
-    { caste: 'भटक्या जमाती - क (NT-C)', male: '-', female: '-', total: '-' },
-    { caste: 'भटक्या जमाती - ड (NT-D)', male: '-', female: '-', total: '-' },
-    { caste: 'खुला प्रवर्ग(OPEN)', male: '-', female: '-', total: '-' }
-  ];
+// export const CasteWiseVoterTable = ({ language = 'mr' }) => {
+//   const t = translations[language] || translations.mr;
+//   
+//   const casteData = [
+//     { caste: 'अनुसुचीत जाती (SC)', male: '-', female: '-', total: '-' },
+//     { caste: 'अनुसुचीत जमाती(ST)', male: '-', female: '-', total: '-' },
+//     { caste: 'इतर मागास वग(OBC)', male: '-', female: '-', total: '-' },
+//     { caste: 'विशेष मागास प्रवर्ग (SBC)', male: '-', female: '-', total: '-' },
+//     { caste: 'भटक्या जमाती -अ (VJ)', male: '-', female: '-', total: '-' },
+//     { caste: 'भटक्या जमाती - ब(NT-B)', male: '-', female: '-', total: '-' },
+//     { caste: 'भटक्या जमाती - क (NT-C)', male: '-', female: '-', total: '-' },
+//     { caste: 'भटक्या जमाती - ड (NT-D)', male: '-', female: '-', total: '-' },
+//     { caste: 'खुला प्रवर्ग(OPEN)', male: '-', female: '-', total: '-' }
+//   ];
 
-  return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
-            {t.casteTable.title}
-          </h2>
-          
-          <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-lg shadow-md overflow-hidden">
-              <thead className="bg-teal-600 text-white">
-                <tr>
-                  <th className="px-4 py-3 text-left">{t.casteTable.caste}</th>
-                  <th className="px-4 py-3 text-left">{t.casteTable.male}</th>
-                  <th className="px-4 py-3 text-left">{t.casteTable.female}</th>
-                  <th className="px-4 py-3 text-left">{t.casteTable.total}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {casteData.map((row, index) => (
-                  <tr 
-                    key={index} 
-                    className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}
-                  >
-                    <td className="px-4 py-3 font-medium">{row.caste}</td>
-                    <td className="px-4 py-3">{row.male}</td>
-                    <td className="px-4 py-3">{row.female}</td>
-                    <td className="px-4 py-3 font-semibold">{row.total}</td>
-                  </tr>
-                ))}
-                <tr className="bg-teal-50 font-bold">
-                  <td className="px-4 py-3">एकूण</td>
-                  <td className="px-4 py-3">-</td>
-                  <td className="px-4 py-3">-</td>
-                  <td className="px-4 py-3">-</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+//   return (
+//     <section className="py-16 bg-white">
+//       <div className="container mx-auto px-4">
+//         <div className="max-w-6xl mx-auto">
+//           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+//             {t.casteTable.title}
+//           </h2>
+//           
+//           <div className="overflow-x-auto">
+//             <table className="w-full bg-white rounded-lg shadow-md overflow-hidden">
+//               <thead className="bg-teal-600 text-white">
+//                 <tr>
+//                   <th className="px-4 py-3 text-left">{t.casteTable.caste}</th>
+//                   <th className="px-4 py-3 text-left">{t.casteTable.male}</th>
+//                   <th className="px-4 py-3 text-left">{t.casteTable.female}</th>
+//                   <th className="px-4 py-3 text-left">{t.casteTable.total}</th>
+//                 </tr>
+//               </thead>
+//               <tbody>
+//                 {casteData.map((row, index) => (
+//                   <tr 
+//                     key={index} 
+//                     className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}
+//                   >
+//                     <td className="px-4 py-3 font-medium">{row.caste}</td>
+//                     <td className="px-4 py-3">{row.male}</td>
+//                     <td className="px-4 py-3">{row.female}</td>
+//                     <td className="px-4 py-3 font-semibold">{row.total}</td>
+//                   </tr>
+//                 ))}
+//                 <tr className="bg-teal-50 font-bold">
+//                   <td className="px-4 py-3">एकूण</td>
+//                   <td className="px-4 py-3">-</td>
+//                   <td className="px-4 py-3">-</td>
+//                   <td className="px-4 py-3">-</td>
+//                 </tr>
+//               </tbody>
+//             </table>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
 
 // Village Statistics Components (Combined)
 export const VillageStatisticsComponents = ({ language = 'mr' }) => {
   return (
     <div>
       <StatisticsDashboard language={language} />
-      <CasteWiseVoterTable language={language} />
+      {/* <CasteWiseVoterTable language={language} /> */}
       <QRPaymentSection language={language} />
     </div>
   );

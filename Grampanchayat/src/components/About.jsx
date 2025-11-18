@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useHomeData } from '../hooks/useHomeData';
 import VideoPlayer from './VideoPlayer';
+import video1 from '../images/video1.mp4';
 
 const About = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -11,7 +12,7 @@ const About = () => {
   const aboutData = data?.about;
   const title = aboutData?.title?.[language] || aboutData?.title?.mr || 'आपला अभिमान, आपलं गाव';
   const description = aboutData?.description?.[language] || aboutData?.description?.mr || 'हे गाव एक शांत आणि सांस्कृतिक वारसा जपणारे ठिकाण आहे. शिक्षणाचा दर्जा चांगला असून साक्षरतेच्या दृष्टीने हे गाव प्रगत मानले जाते. स्वतःची ग्रामपंचायत असल्याने स्थानिक पातळीवर प्रशासनाची सुविधा उपलब्ध आहे. जवळच महत्त्वाची शहरे आणि बाजारपेठा असल्याने खरेदी-विक्री आणि व्यवहार सोयीस्कर होतात. गावाजवळून जाणारे राष्ट्रीय महामार्ग वाहतूक आणि संपर्कासाठी महत्त्वाचे साधन ठरतात.';
-  const videoUrl = aboutData?.videoUrl;
+  const videoUrl = aboutData?.videoUrl || video1;
 
   return (
     <>
@@ -31,24 +32,22 @@ const About = () => {
                   {description}
                 </p>
             
-                {/* Play Button - Only show if video URL exists */}
-                {videoUrl && (
-                  <div className="flex justify-center">
-                    <button
-                      onClick={() => setIsVideoOpen(true)}
-                      className="w-20 h-20 md:w-24 md:h-24 bg-teal-800 hover:bg-teal-900 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
-                      aria-label="Play Video"
+                {/* Play Button */}
+                <div className="flex justify-center">
+                  <button
+                    onClick={() => setIsVideoOpen(true)}
+                    className="w-20 h-20 md:w-24 md:h-24 bg-teal-800 hover:bg-teal-900 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+                    aria-label="Play Video"
+                  >
+                    <svg 
+                      className="w-8 h-8 md:w-10 md:h-10 text-white ml-1" 
+                      fill="teal" 
+                      viewBox="0 0 24 24"
                     >
-                      <svg 
-                        className="w-8 h-8 md:w-10 md:h-10 text-white ml-1" 
-                        fill="teal" 
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </button>
-                  </div>
-                )}
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </button>
+                </div>
               </>
             )}
           </div>
@@ -56,7 +55,7 @@ const About = () => {
       </section>
 
       {/* Video Player Modal */}
-      {isVideoOpen && videoUrl && (
+      {isVideoOpen && (
         <VideoPlayer 
           videoUrl={videoUrl}
           onClose={() => setIsVideoOpen(false)} 

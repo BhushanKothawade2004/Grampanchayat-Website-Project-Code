@@ -9,7 +9,7 @@ const Footer = () => {
 
   const otherMenu = [
     // { label: 'पुरस्कार / यशोगाथा', link: '#awards' },
-    // { label: 'पर्यटन स्थळ', link: '#tourism' },
+    { label: 'पर्यटन स्थळ', link: '#tourism' },
     { label: 'मंदिर', link: '#temple' },
     { label: 'आरोग्य दवाखाने', link: '#health' },
     { label: 'शाळा', link: '#school' },

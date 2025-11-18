@@ -5,7 +5,7 @@ import Home from './components/home/Home';
 import AboutPage from './components/pages/AboutPage';
 import NewsPage from './components/pages/NewsPage';
 import AwardsPage from './components/pages/AwardsPage';
-// import TourismPage from './components/pages/TourismPage';
+import TourismPage from './components/pages/TourismPage';
 import GalleryPage from './components/pages/GalleryPage';
 import TemplePage from './components/pages/TemplePage';
 import HealthPage from './components/pages/HealthPage';
@@ -16,6 +16,7 @@ import VillageInfoPage from './components/pages/VillageInfoPage';
 import VeterinaryPage from './components/pages/VeterinaryPage';
 import SavingsGroupPage from './components/pages/SavingsGroupPage';
 import SchemesPage from './components/pages/SchemesPage';
+import YojanaPage from './components/pages/YojanaPage';
 import ContactPage from './components/pages/ContactPage';
 import ComplaintModal from './components/ComplaintModal';
 import Footer from './components/Footer';
@@ -64,8 +65,8 @@ function App() {
       //   return <NewsPage />;
       // case 'awards':
       //   return <AwardsPage />;
-      // case 'tourism':
-      //   return <TourismPage />;
+      case 'tourism':
+        return <TourismPage />;
       case 'gallery':
         return <GalleryPage />;
       case 'temple':
@@ -86,6 +87,8 @@ function App() {
         return <SavingsGroupPage />;
       case 'schemes':
         return <SchemesPage />;
+      case 'yojana':
+        return <YojanaPage />;
       case 'contact':
         return <ContactPage />;
       default:
