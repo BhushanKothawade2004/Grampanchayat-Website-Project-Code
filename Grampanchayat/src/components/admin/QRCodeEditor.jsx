@@ -353,7 +353,7 @@ const QRCodeEditor = () => {
                   onChange={(e) => handleInputChange('isActive', e.target.checked)}
                   className="mr-2"
                 />
-                <span className="text-sm font-medium text-gray-700">Active (Show on website)</span>
+                <span className="text-sm font-medium text-gray-700">Acti  ve (Show on website)</span>
               </label>
             </div>
           </div>
